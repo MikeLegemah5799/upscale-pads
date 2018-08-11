@@ -1,0 +1,319 @@
+#content-area {
+    overflow: auto;
+    width: 100%;
+    min-height: 100vh;
+   #filter {
+        background: $silver;
+        max-width: 300px;
+        @media(min-width: $ipad-pro) {
+            width: 30%;
+            display: inline-block;
+            float: left;
+        }
+        .inside{
+            h4{
+                font-size: .9rem;
+                margin-bottom: 25px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+            padding: 20px;
+            select {
+                background: transparent;
+                padding: 10px;
+                font-size: 16px;
+                font-weight: 500;
+                color: #1b1b1b;
+                display: block;
+                margin-bottom: 25px;
+                width: 100%;
+                border-radius: 5px;
+            }//select
+            .filters{
+                .title {
+                    font-size: .9rem;
+                    display: block;
+                    margin-bottom: 1rem;
+                    color: $aluminum;
+                }//title
+                input[type="text"] {  
+                    width: 100%;
+                    margin-bottom: 1rem;
+                    border-radius: 5px;
+                    padding: .4rem;
+                    @media(min-width: $ipad-pro) {
+                        width: 45%;
+                        display: inline-block;
+                        margin-right: 2.5%;
+
+                    }  
+                }//input text
+                &.amenities {
+                    label {
+                        display: block;
+                        width: 100%;
+                        padding: 10px 0;
+                        input[type="checkbox"] {
+                            float: right;
+                        }
+                    }
+                }
+            }//filters
+        }///inside
+
+    }///filter
+
+    /******* Listings section ************************************/
+    #listings {
+        padding: 15px 15px 80px 15px;
+        background: $eggshell;
+        @media(min-width: $ipad-pro) {
+            width: 70%;
+            float: left;
+            display: inline-block;
+        }///1024px
+        .search-area {
+            input[type="text"] {
+                width: 70%;
+                background: transparent;
+                font-size: 2rem;
+                border: none;
+                border-bottom: 2px solid $aluminum;
+                font-weight: 400;
+                margin-bottom: 20px;
+                color: $lightgrey;
+            }///input text
+        }///search area
+
+        .sortby-area {
+            margin-bottom: 20px;
+            .sort-number {
+                display: inline-block;
+            }
+            .results {
+                color: $aluminum;
+                font-size: .8rem;
+                display: inline-block;
+            }///results
+            .sort-options {
+                float: right;
+                select {
+                    font-size:.9rem;
+                    font-weight: 300;
+                    border: 1px solid $lightgrey;
+                    background: transparent;
+                    padding: 1px;
+                    border-radius: 5px;
+                    display: inline-block;
+                    margin-right: 15px;
+                    vertical-align: top;
+                }///select
+                .view{
+                    display: inline-block;
+                    .fas {
+                        font-size: 1.5rem;
+                        margin-right: 15px;
+                    }
+                }///view
+            }///sort options
+        }///sortby-area
+
+        .listings-results {
+            margin-bottom: 60px;
+            .col-md-3 {
+                width: 25%;
+                float: left;
+                display: inline-block;
+                vertical-align: top;
+                padding: 0 15px;
+            }
+            .listing {
+                background: $white;
+                border-radius: 5px;
+                -webkit-box-shadow: 0px 9px 54px -4px rgba(176,176,176,1);
+                -moz-box-shadow: 0px 9px 54px -4px rgba(176,176,176,1);
+                box-shadow: 0px 9px 54px -4px rgba(176,176,176,1);
+                margin-bottom: 20px;
+                
+
+                .listing-img {
+                    color: $white;
+                    padding: 15px;
+                    position: relative;
+                    background: url("https://i.ytimg.com/vi/J4rBDsimsmQ/maxresdefault.jpg") no-repeat center center; 
+                    -webkit-background-size: cover;
+                    -moz-background-size: cover;
+                    -o-background-size: cover;
+                    background-size: cover!important; 
+                    min-height: 200px;
+                    -webkit-border-top-left-radius: 5px;
+                    -webkit-border-top-right-radius: 5px;
+                    -moz-border-radius-topleft: 5px;
+                    -moz-border-radius-topright: 5px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    &:hover {
+                        .details {
+                            opacity: 1;
+                        }
+                        .address{
+                            opacity: 0;
+                        }
+                    }
+
+                    .address {
+                        position: absolute;
+                        font-size: 1.3rem;
+                        text-shadow: 0px 1px 9px rgba(91, 91, 91, 1);
+                        bottom: 20px;
+                        opacity: 1;
+                        transition: all .4s ease-in-out;
+                        text-transform: capitalize;
+                    }///address
+
+                    .details {
+                        transition: all .6s ease-in-out;
+                        opacity: 0;
+                        padding: 30px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        -webkit-border-top-left-radius: 5px;
+                        -webkit-border-top-right-radius: 5px;
+                        -moz-border-radius-topleft: 5px;
+                        -moz-border-radius-topright: 5px;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        background: rgba(78,2,229,.8); /* Old browsers */
+                        background: -moz-linear-gradient(-45deg, rgba(78,2,229,.8) 0%, rgba(157,28,237,.8) 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(-45deg, rgba(78,2,229,.8) 0%,rgba(157,28,237,.8) 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(135deg, rgba(78,2,229,.8) 0%,rgba(157,28,237,.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        .user-img {
+                            height: 35px;
+                            width: 35px;
+                            border-radius: 50%;
+                            border: 2px solid $white;
+                            display: inline-block;
+                            background: url("https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&h=350") no-repeat center center; 
+                            -webkit-background-size: cover;
+                            -moz-background-size: cover;
+                            -o-background-size: cover;
+                            background-size: cover; 
+                        }///user img
+
+                        .user-details {
+                            display: inline-block;
+                            vertical-align: top; 
+                            .user-name {
+                                display: block;
+                                color: rgba(255,255,255,1);
+                                font-size: .9rem;
+                                font-weight: 300;
+                                margin-top: 3px;
+                                margin-bottom: 5px;
+
+                            }//user name
+                            .post-date {
+                                display: block;
+                                color: rgba(255,255,255,.7);
+                                font-size: .9rem;
+                            }///post date
+                        }///user details
+                        .listing-details {
+                            margin-top: 20px;
+                            span {
+                                display: inline-block; 
+                                font-size: .8rem;
+                                font-weight: 300;
+                                vertical-align: top;
+                                position: relative;
+                                top: 3px;
+                            }
+                            .fas {
+                                display: inline-block;
+                                font-size: 20px;
+                            } 
+                            .floor-space {
+                                margin-bottom: 10px;
+                            }
+                            .bedrooms {
+                                margin-bottom: 10px;
+                            }
+                          
+                        }///listing details
+                    }////details
+                }///listing img
+                .col-md-3 {
+                    width: 25%;
+                    display: inline-block;
+                    vertical-align: top;
+                    float: left;
+                }
+
+                .col-md-9 {
+                    width: 75%;
+                    display: inline-block;
+                }
+
+                .view-btn {
+                    background: $pink;
+                    padding: 8px;
+                    font-size: .9rem;
+                    border-radius: 5px;
+                    text-align: center;
+                    max-width: 150px;
+                    transition: background .3s ease-in-out;
+                    &:hover {
+                        background: #000;
+                        cursor: pointer;
+                    }
+                }
+            }///listing
+            .bottom-info {
+                padding: 20px;
+                .price {
+                    font-size: 1rem;
+                    display: block;
+                    margin-bottom: 10px;
+                    color: $aluminum;
+                }///price
+                .location {
+                    font-size: 1.3rem;
+                    display: block;
+                    color: $violet;
+                    .fa{
+                        color: $pink;
+                    }
+                }///location
+            }/////bottom info
+        }///listing results
+    }//////listings
+
+
+}///////content area>>>>
+
+#pagination {
+    clear: both;
+    text-align: center;
+    padding-top: 50px;
+    .pages {
+        display: inline-block;
+        -webkit-box-shadow: 0px 9px 54px -4px rgba(176,176,176,1);
+        -moz-box-shadow: 0px 9px 54px -4px rgba(176,176,176,1);
+        box-shadow: 0px 9px 54px -4px rgba(176,176,176,1);
+
+        li {
+            display: inline-block;
+            padding: 20px 30px;
+            &:hover,
+            &.active {
+                background: $pink;
+                color: $white;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+    }///pages
+}/////pagination

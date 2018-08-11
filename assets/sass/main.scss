@@ -1,0 +1,245 @@
+/*****imports******/
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700');
+@import "reset";
+@import "variables";
+@import "listings";
+@import "content-area";
+
+/******** Reset ***********************/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/********Main Styles **********/
+
+
+*,
+body,
+html {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  
+  header {
+    background: $violet;
+    color: $white;
+    overflow: auto;
+
+    .logo{
+      float: left;
+      margin-left: 20px;
+      img {
+        max-width: 120px;
+      }
+    }//logo
+    nav {
+      float: right;
+      margin-top: 50px;
+      margin-right: 40px;
+      a {
+        color: $white;
+        text-decoration: none;
+        padding: 10px 20px;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: .9rem;
+        &:hover {
+          color: $pink;
+        }//hover
+        &.register-btn {
+          background: $pink;
+          padding: 7px 25px;
+          text-align: center;
+          color: $white;
+          border-radius: 5px;
+        }
+      }///a
+    }//nav
+  }///header
+
+  footer {
+    background: $violet;
+    color: $white;
+    overflow: auto;
+    padding: 20px 15px;
+    height: 120px;
+    ul {
+      float: right;
+      li {
+        display: inline-block;
+        a {
+          margin: 0 10px;
+          i {
+            color: $pink;
+            font-size: 28px;
+          }///i
+        }
+
+      }
+    }///ul
+
+    .app-btns {
+      text-align: center;
+      display: inline-block;
+      margin: 0 30%;
+    }
+
+    button {
+      background: $pink;
+      border: 0;
+      color: #fff;
+      display: inline-block;
+      padding: 0 20px 10px 20px;
+      font-weight: 700;
+      text-align: center;
+      margin-right: 20px;
+      border-radius: 5px;
+
+      i {
+        position: relative;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+      }
+    }///button
+
+    p {
+      display: inline-block;
+    }
+
+  }////footer
+
+
+}// body
+
